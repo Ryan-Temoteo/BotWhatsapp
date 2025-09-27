@@ -63,7 +63,7 @@ while (true)
                             .AddHours(random.Next(8, 23))  // entre 8h e 22h59
                             .AddMinutes(random.Next(0, 60));
 
-    Console.WriteLine($"Novo horário escolhido para amanhã: {horario:HH:mm}");
+    Console.WriteLine($"Novo horário escolhido para amanhã: {horario.Day.ToString()} , {horario:HH:mm}"); // dia, hora:minuto
 }
 
 DateTime GerarHorarioFuturo(DateTime agora, Random rnd)
